@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <display-name>SIBECA-18 - Sistema Web de Seguimiento del Proceso Beca 18 (Convocatoria 2027)</display-name>
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+    <session-config>
+        <session-timeout>30</session-timeout>
+        <cookie-config>
+            <http-only>true</http-only>
+        </cookie-config>
+    </session-config>
+
+    <!-- Referencia al DataSource JNDI PostgreSQL configurado en el servidor Tomcat 10.1 / GlassFish 7 -->
+    <resource-ref>
+        <description>DataSource JNDI PostgreSQL (pgAdmin 4) para SIBECA-18</description>
+        <res-ref-name>jdbc/sibeca18DS</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
+
+    <error-page>
+        <error-code>403</error-code>
+        <location>/WEB-INF/views/shared/acceso-denegado.jsp</location>
+    </error-page>
+</web-app>

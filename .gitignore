@@ -1,0 +1,22 @@
+# Archivos de compilación Maven y NetBeans
+target/
+nbactions.xml
+nb-private.xml
+private/
+
+# Configuración local del DataSource con credenciales de desarrollo
+src/main/webapp/META-INF/context.xml
+conf/context.xml
+*.env
+*.local.properties
+
+# Archivos temporales y bitácoras generadas en ejecución
+logs/
+*.log
+bitacora_sibeca18.txt
+
+# Archivos de sistema operativo e IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

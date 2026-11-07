@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Archivo de referencia para configurar el DataSource JNDI de PostgreSQL (pgAdmin 4) en Apache Tomcat 10.1
+    Ubicación local de desarrollo: src/main/webapp/META-INF/context.xml o $CATALINA_BASE/conf/context.xml
+    IMPORTANTE: No versionar contraseñas reales en repositorios públicos.
+-->
+<Context path="/Beca18">
+    <Resource name="jdbc/sibeca18DS"
+              auth="Container"
+              type="javax.sql.DataSource"
+              driverClassName="org.postgresql.Driver"
+              url="jdbc:postgresql://localhost:5433/beca"
+              username="postgres"
+              password="CHANGE_ME_IN_LOCAL_SERVER"
+              maxTotal="20"
+              maxIdle="10"
+              maxWaitMillis="10000"/>
+</Context>
